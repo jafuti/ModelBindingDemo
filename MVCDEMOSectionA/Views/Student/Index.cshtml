@@ -1,0 +1,34 @@
+﻿@model List<MVCDEMOSectionA.Models.Student>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div> 
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Grade</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var std in Model)
+                {
+                    <tr>@std.ID</tr>
+                    <tr>@std.Name</tr>
+                    <tr>@std.Grade</tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
